@@ -10,9 +10,9 @@ import cft.helpers.TextFormatter;
 
 public class SVGGenerator {
 	
-	private static String directory = "renders";
-	private static String filename = "render_";
-	private static String extension = ".svg";
+	private static final String directory = "renders";
+	private static final String filename = "render_";
+	private static final String extension = ".svg";
 	
 	public static boolean generateFile(String content) {
 		if (!generateFolder()) {
