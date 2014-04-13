@@ -26,12 +26,15 @@ public class Main {
 			FibonacciGenerator.iterate();
 		}
 		
-		// wheel test
-		System.out.println(Circle.getAngle(1200.0D));
+		// circle test
+		System.out.println(Circle.getAngle(359.0D));
 		System.out.println(Circle.getAngle(4.5D));
 		System.out.println(Circle.getAngle(15.0D));
 		System.out.println(Circle.getAngle(271.0D));
 		System.out.println(Circle.getAngle(0.0D));
+		
+		System.out.println(0 % 180);
+		System.out.println(180 % 180);
 	}
 	
 }

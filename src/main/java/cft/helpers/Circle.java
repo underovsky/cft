@@ -12,7 +12,12 @@ public class Circle {
 		Double angle = param % Config.circleRadius;
 		Double segmentDouble = Math.ceil(angle / (double) Config.segmentAngle);
 		int segment = segmentDouble.intValue();
-		return segment * Config.segmentAngle;
+		
+		if (segment == Config.circleSegments) {
+			return 0;
+		} else {
+			return segment * Config.segmentAngle;
+		}
 	}
 	
 }
