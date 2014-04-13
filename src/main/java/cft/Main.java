@@ -2,6 +2,7 @@ package cft;
 
 import cft.base.Colour;
 import cft.base.Coord;
+import cft.helpers.Circle;
 import cft.helpers.FibonacciGenerator;
 import cft.svg.SVGBuilder;
 import cft.svg.SVGGenerator;
@@ -24,6 +25,13 @@ public class Main {
 			System.out.println(FibonacciGenerator.getGoldenRatio());
 			FibonacciGenerator.iterate();
 		}
+		
+		// wheel test
+		System.out.println(Circle.getAngle(1200.0D));
+		System.out.println(Circle.getAngle(4.5D));
+		System.out.println(Circle.getAngle(15.0D));
+		System.out.println(Circle.getAngle(271.0D));
+		System.out.println(Circle.getAngle(0.0D));
 	}
 	
 }
