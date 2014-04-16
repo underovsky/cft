@@ -3,6 +3,7 @@ package cft;
 import cft.base.Colour;
 import cft.base.Coord;
 import cft.helpers.Circle;
+import cft.helpers.CoordGenerator;
 import cft.helpers.FibonacciGenerator;
 import cft.svg.SVGBuilder;
 import cft.svg.SVGGenerator;
@@ -18,23 +19,10 @@ public class Main {
 		svgBuilder.drawRect(new Coord(14.0, 14.0), 10.0, 12.0);
 		// SVGGenerator.generateFile(svgBuilder.buildSVG());
 		
-		// fibonacci test
-		for (int i = 0; i < 20; ++i) {
-			System.out.println(FibonacciGenerator.getPrevious());
-			System.out.println(FibonacciGenerator.getCurrent());
-			System.out.println(FibonacciGenerator.getGoldenRatio());
-			FibonacciGenerator.iterate();
-		}
-		
-		// circle test
-		System.out.println(Circle.getAngle(359.0D));
-		System.out.println(Circle.getAngle(4.5D));
-		System.out.println(Circle.getAngle(15.0D));
-		System.out.println(Circle.getAngle(271.0D));
-		System.out.println(Circle.getAngle(0.0D));
-		
-		System.out.println(0 % 180);
-		System.out.println(180 % 180);
+		// coord generator test
+		Coord[] coords = CoordGenerator.generateToCoords(new Coord(1.0D, 2.0D), 45, Math.sqrt(2.0));
+		System.out.println(Math.round(coords[0].getX()) + " " + Math.round(coords[0].getY()));
+		System.out.println(Math.round(coords[1].getX()) + " " + Math.round(coords[1].getY()));
 	}
 	
 }
