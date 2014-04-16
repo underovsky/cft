@@ -1,6 +1,6 @@
-package cft.helpers;
+package cft.calc;
 
-public class FibonacciGenerator {
+public class Fibonacci {
 
 	private static final Long first = 0L;
 	private static final Long second = 1L;

@@ -1,10 +1,10 @@
 package cft;
 
 import cft.base.Colour;
-import cft.base.Coord;
-import cft.helpers.Circle;
-import cft.helpers.CoordGenerator;
-import cft.helpers.FibonacciGenerator;
+import cft.calc.Circle;
+import cft.calc.Fibonacci;
+import cft.path.Coord;
+import cft.path.CoordGenerator;
 import cft.svg.SVGBuilder;
 import cft.svg.SVGGenerator;
 

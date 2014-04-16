@@ -1,6 +1,5 @@
-package cft.helpers;
+package cft.path;
 
-import cft.base.Coord;
 
 public class CoordGenerator {
 

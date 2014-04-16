@@ -1,8 +1,8 @@
 package cft.svg;
 
 import cft.base.Colour;
-import cft.base.Coord;
 import cft.helpers.TextFormatter;
+import cft.path.Coord;
 
 public class SVGBuilder {
 	

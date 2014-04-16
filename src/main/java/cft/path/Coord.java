@@ -1,4 +1,4 @@
-package cft.base;
+package cft.path;
 
 public class Coord {
 	

@@ -1,4 +1,4 @@
-package cft.helpers;
+package cft.calc;
 
 import cft.base.Config;
 

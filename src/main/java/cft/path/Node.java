@@ -1,6 +1,5 @@
 package cft.path;
 
-import cft.base.Coord;
 
 public class Node {
 	

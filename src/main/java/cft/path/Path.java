@@ -7,6 +7,7 @@ public class Path {
 	
 	private List<Node> path;
 	private Double branchingRatio;
+	private Double livingRatio;
 	
 	public Path() {
 		this.path = new LinkedList<Node>();
@@ -51,6 +52,14 @@ public class Path {
 
 	public void setBranchingRatio(Double branchingRatio) {
 		this.branchingRatio = branchingRatio;
+	}
+
+	public Double getLivingRatio() {
+		return livingRatio;
+	}
+
+	public void setLivingRatio(Double livingRatio) {
+		this.livingRatio = livingRatio;
 	}
 	
 }
