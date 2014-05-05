@@ -18,13 +18,12 @@ public class Lorenz {
 	    return seed.getX() * seed.getY() - b * seed.getZ();
 	}
 	
-	public static Double getParam(Seed seed, Double dt) {
+	public static Seed getSeed(Seed seed, Double dt) {
 		Double x = seed.getX() + dx(seed) * dt;
 		Double y = seed.getY() + dy(seed) * dt;
 		Double z = seed.getZ() + dz(seed) * dt;
 		
-		// not really the best way
-		// TODO: some testing
-		return x * y * z;
+		return new Seed(x, y, z);
 	}
+	
 }

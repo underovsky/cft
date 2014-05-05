@@ -1,9 +1,7 @@
 package cft.path;
 
-
 public class Node {
-	
-	private Long id;
+
 	private Coord from;
 	private Coord to;
 	
@@ -13,8 +11,7 @@ public class Node {
 	private Double width;
 	private Double length;
 	
-	public Node(Long id, Coord from, Coord to, Double priority, int angle, Double width, Double length) {
-		this.id = id;
+	public Node(Coord from, Coord to, Double priority, int angle, Double width, Double length) {
 		this.from = from;
 		this.to = to;
 		
@@ -47,14 +44,6 @@ public class Node {
 
 	public void setWidth(Double width) {
 		this.width = width;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public int getAngle() {

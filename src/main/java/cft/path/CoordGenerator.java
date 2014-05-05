@@ -1,6 +1,5 @@
 package cft.path;
 
-
 public class CoordGenerator {
 
 	public static Coord[] generateToCoords(Coord from, int angle, Double length) {
@@ -9,7 +8,7 @@ public class CoordGenerator {
 		a = b = c = 0.0D;
 		
 		// result coordinates
-		Double x1,y1, x2, y2;
+		Double x1, y1, x2, y2;
 		x1 = y1 = x2 = y2 = 0.0D;
 		
 		// parallel to y axis

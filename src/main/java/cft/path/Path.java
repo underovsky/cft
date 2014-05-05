@@ -12,6 +12,11 @@ public class Path {
 	public Path() {
 		this.path = new LinkedList<Node>();
 		this.branchingRatio = 0.0D;
+		this.livingRatio = 0.0D;
+	}
+
+	public void addNode(Node node) {
+		path.add(node);
 	}
 	
 	public Node getNodeFromStart(int index) {
