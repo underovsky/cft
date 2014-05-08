@@ -23,10 +23,6 @@ public class Main {
 		Coord[] coords = CoordGenerator.generateToCoords(new Coord(1.0D, 2.0D), 45, Math.sqrt(2.0));
 		System.out.println(Math.round(coords[0].getX()) + " " + Math.round(coords[0].getY()));
 		System.out.println(Math.round(coords[1].getX()) + " " + Math.round(coords[1].getY()));
-		
-		// fractal first tests
-		Fractal fractal = new Fractal();
-		fractal.createFirstSeed();
 	}
 	
 }

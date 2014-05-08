@@ -5,6 +5,7 @@ public class Config {
 	public static int subIndex = 2;
 	public static int maxIterations = 1000;
 	public static int branchNum = 2;
+	public static int startPathsNum = 3;
 	
 	public static int branchingRatioIndex = 10;
 	public static int livingRatioIndex = 10;

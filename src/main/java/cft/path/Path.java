@@ -8,11 +8,13 @@ public class Path {
 	private List<Node> path;
 	private Double branchingRatio;
 	private Double livingRatio;
+	private boolean alive;
 	
 	public Path() {
 		this.path = new LinkedList<Node>();
 		this.branchingRatio = 0.0D;
 		this.livingRatio = 0.0D;
+		this.alive = true;
 	}
 
 	public void addNode(Node node) {
@@ -65,6 +67,14 @@ public class Path {
 
 	public void setLivingRatio(Double livingRatio) {
 		this.livingRatio = livingRatio;
+	}
+
+	public boolean isAlive() {
+		return alive;
+	}
+
+	public void setAlive(boolean alive) {
+		this.alive = alive;
 	}
 	
 }

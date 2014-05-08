@@ -6,6 +6,7 @@ import java.util.List;
 
 import cft.base.Colour;
 import cft.base.Config;
+import cft.calc.Fibonacci;
 import cft.chaos.Lorenz;
 import cft.chaos.Seed;
 import cft.path.Coord;
@@ -19,7 +20,7 @@ public class Fractal {
 	private Colour colour;
 	
 	private List<Path> paths;
-
+	
 	private Seed seed;
 	private long timestamp;
 	
@@ -32,8 +33,32 @@ public class Fractal {
 	}
 	
 	// TODO: the magic will happen here
-	// end conditions: no more paths alive or > maxIterations
 	public void generate() {
+		createFirstSeed();
+		
+		Coord from = new Coord(Config.middlePoint, Config.middlePoint);
+		
+		for (int i = 0; i < Config.startPathsNum; ++i) {
+			Node newNode = createNode(from);
+			Path newPath = new Path();
+			newPath.addNode(newNode);
+			paths.add(newPath);
+		}
+		
+		boolean cont = true;
+		boolean isPathAlive = false;
+		long it = 0;
+		
+		while (cont) {
+			Fibonacci.iterate();
+			// TODO: describe steps of algorithm
+
+			if (++it > Config.maxIterations || !isPathAlive) {
+				cont = false;
+			}
+			
+			isPathAlive = false;
+		}
 	}
 	
 	// TODO: branching ratio and living ratio have to be generated in some sophisticated way, but I'm too tired to think now
@@ -46,6 +71,12 @@ public class Fractal {
 	 * generate new seed every time
 	 * */
 	public Node createNode(Coord from) {
+		createSeed();
+		return null;
+	}
+	
+	// TODO
+	public Node createFirstNode() {
 		return null;
 	}
 	
@@ -84,6 +115,18 @@ public class Fractal {
 		seed = newSeed;
 	}
 	
+	public boolean isCoordInside(Coord coord) {
+		if (coord.getX() > Config.canvasSize || coord.getX() < 0) {
+			return false;
+		}
+		
+		if (coord.getY() > Config.canvasSize || coord.getY() < 0) {
+			return false;
+		}
+		
+		return true;
+	}
+	
 	public boolean isPathDead(Path path) {
 		if (path.getLivingRatio() < Config.livingRatioIndex) {
 			return true;
@@ -104,7 +147,7 @@ public class Fractal {
 			return;
 		}
 		
-		path.setBranchingRatio(0.0D);
+		path.setBranchingRatio(0.0D); // FIXME: should be calculated
 		Node node = path.getNodeFromEnd(0);
 		Coord from = node.getFrom();
 		
