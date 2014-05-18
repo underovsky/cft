@@ -3,12 +3,13 @@ package cft.base;
 public class Config {
 	
 	public static int subIndex = 2;
-	public static int maxIterations = 1000;
+	public static int maxIterations = 20;
 	public static int branchNum = 2;
-	public static int startPathsNum = 3;
+	public static int startPathsNum = 2;
+	public static Double startingLivingRatio = 100D;
 	
-	public static int branchingRatioIndex = 10;
-	public static int livingRatioIndex = 10;
+	public static int branchingRatioIndex = 20;
+	public static int livingRatioIndex = 5;
 	
 	public static int circleRadius = 360;
 	public static int circleSegments = 12;

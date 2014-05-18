@@ -1,5 +1,7 @@
 package cft.chaos;
 
+import cft.logger.Logger;
+
 public class Lorenz {
 	
 	private static final Double sig = 10.0D;
@@ -19,6 +21,7 @@ public class Lorenz {
 	}
 	
 	public static Seed getSeed(Seed seed, Double dt) {
+		Logger.log("Lorenz.getSeed: " + dx(seed) + ", " + dy(seed) + ", " + dz(seed));
 		Double x = seed.getX() + dx(seed) * dt;
 		Double y = seed.getY() + dy(seed) * dt;
 		Double z = seed.getZ() + dz(seed) * dt;

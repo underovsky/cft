@@ -4,7 +4,7 @@ public class CoordGenerator {
 
 	public static Coord[] generateToCoords(Coord from, int angle, Double length) {
 		// general form of line function
-		Double a,b,c;
+		Double a, b, c;
 		a = b = c = 0.0D;
 		
 		// result coordinates

@@ -11,3 +11,6 @@ bin
 
 # ignore renders
 renders
+
+# ignore logs
+logs

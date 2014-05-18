@@ -1,6 +1,7 @@
 package cft.calc;
 
 import cft.base.Config;
+import cft.logger.Logger;
 
 public class Circle {
 	
@@ -18,8 +19,10 @@ public class Circle {
 		int segment = getSegment(param);
 		
 		if (segment == Config.circleSegments) {
+			Logger.log("Circle.getAngle, angle: " + 0 + " for param: " + param);
 			return 0;
 		} else {
+			Logger.log("Circle.getAngle, angle: " + segment * Config.segmentAngle+ " for param: " + param);
 			return segment * Config.segmentAngle;
 		}
 	}

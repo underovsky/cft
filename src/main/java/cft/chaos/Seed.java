@@ -11,6 +11,11 @@ public class Seed {
 		this.setY(y);
 		this.setZ(z);
 	}
+	
+	// TODO: maybe create better formula
+	public Double getParam() {
+		return Math.abs(x * y * z);
+	}
 
 	public Double getX() {
 		return x;
